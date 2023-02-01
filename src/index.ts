@@ -2,7 +2,9 @@ export default {
   async fetch(request) {
     let html_content = '';
     let html_style = 'body{padding:6em; font-family: sans-serif;} h1{color:#f6821f;}';
+    const html_uuid = crypto.randomUUID();
 
+    html_content += '<p> <strong> UUID: </strong> ' + html_uuid + '</p>';
     html_content += '<p> <strong> AS Number: </strong> ' + request.cf.asn + '</p>';
     html_content += '<p> <strong> AS Organization: </strong>' + request.cf.asOrganization + '</p>';
     html_content += '<p> <strong> Bot Management: </strong>' + request.cf.botManagement + '</p>';
