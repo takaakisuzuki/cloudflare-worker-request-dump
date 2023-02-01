@@ -15,4 +15,4 @@ jobs:
         uses: cloudflare/wrangler-action@2.0.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          command: publish taka-worker --project-name=taka-worker
+          command: publish taka-worker
