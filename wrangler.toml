@@ -1,3 +1,6 @@
 name = "taka-worker"
 main = "src/index.ts"
 compatibility_date = "2023-01-23"
+kv_namespaces = [
+  { binding = "MY_KV", id = "f488b9efda624880bdf24597394dcafa" }
+]
