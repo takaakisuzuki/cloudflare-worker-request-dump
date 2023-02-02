@@ -6,6 +6,7 @@ export default {
     
     const html_uuid = crypto.randomUUID();
     await env.MY_KV.put('uuid', html_uuid);
+    await env.MY_BUCKET.put('uuid', html_uuid);
         
     html_content += '<p> <strong> Worker KV: </strong> ' + value + '</p>';
     html_content += '<p> <strong> UUID: </strong> ' + html_uuid + '</p><br>';
