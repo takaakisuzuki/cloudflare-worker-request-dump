@@ -7,3 +7,6 @@ kv_namespaces = [
 r2_buckets = [
   { binding = "MY_BUCKET", bucket_name = "takabucket", preview_bucket_name = "" }
 ]
+queues.producers = [
+  { binding = "MY_Q", queue = "taka" }
+]
