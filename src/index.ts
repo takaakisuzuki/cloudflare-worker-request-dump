@@ -3,10 +3,12 @@ export default {
     let html_content = '';
     let html_style = 'body{padding:6em; font-family: sans-serif;} h1{color:#f6821f;} div.check {padding: 0px 0px 0px 0px; display: table; margin: 36px auto auto auto;}';
     let value = await env.MY_KV.get("cloudflare");
+    
     const html_uuid = crypto.randomUUID();
+    await env.MY_KV.put('uuid', html_uuid);
         
     html_content += '<p> <strong> Worker KV: </strong> ' + value + '</p>';
-    html_content += '<p> <strong> UUID: </strong> ' + html_uuid + '</p>';
+    html_content += '<p> <strong> UUID: </strong> ' + html_uuid + '</p><br>';
     html_content += '<p> <strong> AS Number: </strong> ' + request.cf.asn + '</p>';
     html_content += '<p> <strong> AS Organization: </strong>' + request.cf.asOrganization + '</p>';
     html_content += '<p> <strong> Bot Management: </strong>' + request.cf.botManagement + '</p>';
