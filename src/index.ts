@@ -13,7 +13,6 @@ export default {
       headers: Object.fromEntries(request.headers),
     });
 
-    #D1_TEST
     const { success } = await env.MY_D.prepare(`insert into taka id value 1`).bind().run()
         
     html_content += '<p> <strong> Worker KV: </strong> ' + value + '</p>';
