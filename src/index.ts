@@ -13,7 +13,7 @@ export default {
       headers: Object.fromEntries(request.headers),
     });
 
-    const { success } = await env.MY_D.prepare(`insert into data id value 1`).bind().run()
+    const { results } = await env.MY_D.prepare("insert into data values 1").bind("TAKAAKI").run()
         
     html_content += '<p> <strong> Worker KV: </strong> ' + value + '</p>';
     html_content += '<p> <strong> UUID: </strong> ' + html_uuid + '</p><br>';
