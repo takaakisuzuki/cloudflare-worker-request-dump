@@ -6,7 +6,7 @@ export default {
     
     const html_uuid = crypto.randomUUID();
     await env.MY_KV.put('uuid', html_uuid);
-    await env.MY_BUCKET.put(html_uuid, 'Test R2 Bucket');
+    //await env.MY_BUCKET.put(html_uuid, 'Test R2 Bucket');
     await env.MY_Q.send({
       url: request.url,
       method: request.method,
