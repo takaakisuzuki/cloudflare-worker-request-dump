@@ -49,7 +49,7 @@ export default {
 
     let html = `<!DOCTYPE html>
       <head>
-        <title> Takaaki: Request Cloudflare dump by GitHub Action 20230302 </title>
+        <title> Takaaki: Request Cloudflare dump by GitHub Action 20240418 </title>
         <style> ${html_style} </style>
         <script>
         var ref;
@@ -79,6 +79,7 @@ export default {
         <h1>Takaaki Workers: Request Cloudflare Edge dump by GitHub Action 20230719-001</h1>
         <input type="checkbox" id="check" onchange="changeCookie()"> Refresh reqeuest<br>
         ${html_content}
+        <p>GitHub Repository: <a href="https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties">https://developers.cloudflare.com/workers/runtime-apis/request/#incomingrequestcfproperties</a></p>
         <p>GitHub Repository: <a href="https://github.com/takaakisuzuki/cloudflare-worker-request-dump">https://github.com/takaakisuzuki/cloudflare-worker-request-dump</a></p>
       </body>`;
 
