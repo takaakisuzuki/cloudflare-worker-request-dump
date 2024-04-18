@@ -10,6 +10,6 @@ r2_buckets = [
 queues.producers = [
   { binding = "MY_Q", queue = "taka" }
 ]
-d1_database = [
+d1_databases = [
   { binding = "MY_D", database_name = "taka-sql", database_id = "2d806ea6-6917-44a7-8ba1-30078760f518" }
 ]
