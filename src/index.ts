@@ -32,6 +32,8 @@ export default {
     html_content += '<p> <strong> Request Priority: </strong>' + request.cf.requestPriority + '</p>';
     html_content += '<p> <strong> TLS Cipher: </strong>' + request.cf.tlsCipher + '</p>';
     html_content += '<p> <strong> TLS Client Auth: </strong>' + request.cf.tlsClientAuth + '</p>';
+    html_content += '<p> <strong> TLS Client HelloLength: </strong>' + request.cf.tlsClientHelloLength + '</p>';
+    html_content += '<p> <strong> TLS Client Random: </strong>' + request.cf.tlsClientRandom + '</p>';
     html_content += '<p> <strong> TLS Client Version: </strong>' + request.cf.tlsVersion + '</p>';
     html_content += '<p> <strong> Colo: </strong>' + request.cf.colo + '</p>';
     html_content += '<p> <strong> Country: </strong>' + request.cf.country + '</p>';
