@@ -4,7 +4,7 @@ export default {
     let html_style = 'body{padding:6em; font-family: sans-serif;} h1{color:#f6821f;} div.check {padding: 0px 0px 0px 0px; display: table; margin: 36px auto auto auto;}';
     const html_uuid = crypto.randomUUID();
     let uuid = '30b286a0-3a89-11ef-903b-27b07a21990a';
-    let value = await env.MY_KV.get('uuid');
+    let value = await env.MY_KV.get(uuid);
     
     //await env.MY_D.prepare("INSERT INTO data id values 1").bind().run()
         
