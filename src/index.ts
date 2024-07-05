@@ -6,7 +6,7 @@ export default {
     let uuid = '30b286a0-3a89-11ef-903b-27b07a21990a';
     let value = await env.MY_KV.get(uuid);
 
-    const { searchParams } = new URL(request.url)
+    const { searchParams } = request.url;
     let name = searchParams.get('uuid')
     let value = await env.MY_KV.get(name);
     
