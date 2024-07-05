@@ -5,10 +5,15 @@ export default {
     const html_uuid = crypto.randomUUID();
     let uuid = '30b286a0-3a89-11ef-903b-27b07a21990a';
     let value = await env.MY_KV.get(uuid);
+
+    const { searchParams } = new URL(request.url)
+    let name = searchParams.get('uuid')
+    let value = await env.MY_KV.get(name);
     
     //await env.MY_D.prepare("INSERT INTO data id values 1").bind().run()
         
     html_content += '<h1><p> <strong> Worker KV ' + uuid + ' value: </strong> ' + value + '</p></h1>';
+    html_content += '<h1><p> <strong> Worker KV Query Param ' + name + ' value: </strong> ' + valueparam + '</p></h1>';
     html_content += '<p> <strong> UUID: </strong> ' + html_uuid + '</p><br>';
     html_content += '<p> <strong> AS Number: </strong> ' + request.cf.asn + '</p>';
     html_content += '<p> <strong> AS Organization: </strong>' + request.cf.asOrganization + '</p>';
