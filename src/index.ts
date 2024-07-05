@@ -8,7 +8,7 @@ export default {
     
     //await env.MY_D.prepare("INSERT INTO data id values 1").bind().run()
         
-    html_content += '<h1><p> <strong> Worker KV' + uuid + ' value: </strong> ' + value + '</p></h1>';
+    html_content += '<h1><p> <strong> Worker KV ' + uuid + ' value: </strong> ' + value + '</p></h1>';
     html_content += '<p> <strong> UUID: </strong> ' + html_uuid + '</p><br>';
     html_content += '<p> <strong> AS Number: </strong> ' + request.cf.asn + '</p>';
     html_content += '<p> <strong> AS Organization: </strong>' + request.cf.asOrganization + '</p>';
@@ -39,7 +39,7 @@ export default {
 
     let html = `<!DOCTYPE html>
       <head>
-        <title> Takaaki: Request Cloudflare dump by GitHub Action 20240418 </title>
+        <title> Takaaki: Request Cloudflare dump by GitHub Action 202407 </title>
         <style> ${html_style} </style>
         <script>
         var ref;
