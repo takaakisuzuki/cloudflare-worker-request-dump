@@ -2,12 +2,12 @@ export default {
   async fetch(request, env) {
     let html_content = '';
     let html_style = 'body{padding:6em; font-family: sans-serif;} h1{color:#f6821f;} div.check {padding: 0px 0px 0px 0px; display: table; margin: 36px auto auto auto;}';
-    //let value = await env.MY_KV.get("cloudflare");
-    const html_uuid = crypto.randomUUID();
+    //const html_uuid = crypto.randomUUID();
+    const { searchParams } = new URL(request.url)
+    let name = searchParams.get('uuid')    
+    let value = await env.MY_KV.get('name');
     
-    let value = await env.MY_KV.get('30b286a0-3a89-11ef-903b-27b07a21990a');
-    await env.MY_BUCKET.put(html_uuid, 'Test write R2 Bucket');
-
+    //await env.MY_BUCKET.put(html_uuid, 'Test write R2 Bucket');
     await env.MY_Q.send({
       url: request.url,
       method: request.method,
