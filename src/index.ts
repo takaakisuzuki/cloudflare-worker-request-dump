@@ -44,7 +44,7 @@ export default {
 
     let html = `<!DOCTYPE html>
       <head>
-        <title> Takaaki: Request Cloudflare dump by GitHub Action 2025 </title>
+        <title> Takaaki: Request Cloudflare dump 2025 </title>
         <style> ${html_style} </style>
         <script>
         var ref;
